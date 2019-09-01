@@ -1,0 +1,34 @@
+I used this command to create the container;
+docker run -d -it --name test ubuntu sh -c 'echo "Input website: "; read website; echo "Searching..."; sleep 1; curl http://$website;'
+
+It made the container run the given small script in the background, and it also waited for input in its own terminal that was not shown because of the -d flag
+
+After that i ran this code;
+docker exec -it test bash
+
+It told the 'test' container to run the command 'bash', and because of the -it flag, it transferred my input/output/other streams into the newly opened terminal inside the container.
+
+After that was done i confirmed that the original program was running with ps aux command, it was, so i basically had different terminal inside the same ubuntu container, and i was free to do anything.
+
+I updated apt;
+root@fa8665ba2890:/# apt update
+
+I downloaded curl;
+root@fa8665ba2890:/# apt install curl
+
+After that i exited the new terminal with 'exit' command, and attached the terminal to the originally started terminal view with;
+docker attach test
+
+Then this happened;
+samisaukkonen@Samis-MacBook-Pro:~/git/Docker2019/Part1$ docker attach test
+helsinki.fi
+Searching...
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
+So i quess it worked :)

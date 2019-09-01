@@ -1,0 +1,11 @@
+I used the dockerfile in this folder to create the image with the command;
+docker build -t docker-clock .
+
+After that i just ran it normally with;
+docker run docker-clock
+
+
+The Dockerfile CMD command has 3 forms, either ["executable", "param1", "param2", ...], ["param1", "param2", ...] or command, param1 param2 ...
+First one runs some executable (like bash or sh) and passes it given params when no input is given from terminal when running image
+Second one gives the image some flags to run if none are given by the user
+And the third one runs the command given

@@ -1,0 +1,15 @@
+samisaukkonen@Samis-MacBook-Pro:~/git/Docker2019/Part1$ docker ps
+CONTAINER ID        IMAGE                               COMMAND             CREATED             STATUS              PORTS               NAMES
+43104eff1358        devopsdockeruh/exec_bash_exercise   "node index"        3 minutes ago       Up 3 minutes                            test
+samisaukkonen@Samis-MacBook-Pro:~/git/Docker2019/Part1$ docker exec -it test bash
+root@43104eff1358:/usr/app# tail -f logs.txt 
+Wed, 28 Aug 2019 17:21:42 GMT
+Secret message is:
+"Docker is easy"
+Wed, 28 Aug 2019 17:21:48 GMT
+Wed, 28 Aug 2019 17:21:51 GMT
+Wed, 28 Aug 2019 17:21:54 GMT
+Wed, 28 Aug 2019 17:21:57 GMT
+Secret message is:
+"Docker is easy"
+

@@ -1,0 +1,6 @@
+I used this command to achieve the desired result;
+docker run --rm -v $(pwd)/logs.txt:/usr/app/logs.txt --name test devopsdockeruh/first_volume_exercise
+
+at first i just tried to share the whole folder, but then i realized that it overwrites the folder inside the container, so it could not find the actual program to run.
+
+the --rm and --name test flags were put there to make trying and testing easier.
