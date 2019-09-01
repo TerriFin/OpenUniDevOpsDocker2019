@@ -1,0 +1,4 @@
+I used this command to run the image (named test), build from the dockerfile;
+docker run --rm --name test -it -p 80:5000 test
+
+only noticeable thing about the command is that it exposes port 80 to containers port 5000 that is opened in the dockerfile
