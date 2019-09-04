@@ -1,0 +1,8 @@
+I used this command to run the file i got from the dockerfile;
+docker run --rm --name test -p 8000:8000 -v $(pwd)/logs.txt:/backend-example-docker/logs.txt test1
+
+I configured computers port 8000 to go to the containers 8000 port, as this is what assigment hinted i should do (navigate to localhost:8000)
+
+After that i attached logs.txt from the current folder (the one this file is located in) into the folder /backend-example-docker (the containers working dir that has everything installed and where it logs the logs)
+
+The images name is test1 because in previous assigment i used test and i just realized i cant delete it yet because i still need it in next exercise

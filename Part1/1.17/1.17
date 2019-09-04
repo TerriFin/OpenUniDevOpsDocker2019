@@ -1,0 +1,5 @@
+This is a image of ubuntu that has openjdk8 installed in it.
+
+It also has nano and gradle preinstalled.
+
+At first i also thought about setting classpath variable, but then i remembered that gradle already handles all that.

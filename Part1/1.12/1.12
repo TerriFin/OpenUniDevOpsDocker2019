@@ -1,0 +1,14 @@
+I ran both of the images i got from the edited dockerfiles at the same time, frontend with the command;
+
+docker run -d --rm --name front p 5000:5000 front
+
+and backend with;
+
+docker run -d --rm --name back p 8000:8000 back
+
+they are not in the same origin, since their ports are different, so the 
+dockerfiles are edited so that they change their api/front URL's accordingly.
+
+This just makes it so that they ping to different urls when certain actions are done.
+
+

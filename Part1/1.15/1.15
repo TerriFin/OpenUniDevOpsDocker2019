@@ -1,0 +1,5 @@
+https://hub.docker.com/r/terrifin/pythonforum
+
+The linked github page contains in the "documentation" folder guide on how to launch the program.
+
+the application is also slightly modified, the run.py script now changes the host to 0.0.0.0 so that it is accessible from the whole network (outside the container)

@@ -1,0 +1,2 @@
+I ran the image with this command;
+docker run --rm --name test -p 80:3000 rubyExec

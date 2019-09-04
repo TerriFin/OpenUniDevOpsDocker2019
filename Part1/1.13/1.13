@@ -1,0 +1,4 @@
+I used the following command to run the image got from the dockerfile;
+docker run --rm -p 80:8080 spring
+
+
